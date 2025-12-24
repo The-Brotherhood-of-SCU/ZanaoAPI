@@ -8,6 +8,7 @@ import (
 
 func main() {
 	r := gin.Default()
+	gin.SetMode(gin.ReleaseMode)
 	cfg := config.GetCfonfig()
 	r.GET("/ping", public.Ping)
 	r.GET("/home", public.HomePage)
